@@ -75,7 +75,7 @@ export default function MainScreen() {
         <p className='clicks-perSec'>{(clicksPerSec).toFixed(2)} Burgers per second</p>
 
         <div className='button-container'>
-          <img className='click-img' src="../assets/freshBurger.png" alt="burger" onClick={() => { handleClick();}}/>
+          <img className='click-img' src="/src/assets/freshBurger.png" alt="burger" onClick={() => { handleClick();}}/>
         </div>
       </div>
         
