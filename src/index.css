@@ -1,0 +1,118 @@
+body{
+  background: linear-gradient(270deg, #77d111, #e75a18, #ffcc00, #00aaff);
+  background-size: 600% 600%;
+  animation: gradientAnimation 5s ease infinite;
+
+  }
+
+.Company{
+  background-color: #343a40;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.UpgradeContainer p{
+  padding: 0%;
+}
+
+#BurgerFlippers{
+  background-color: #f8f9fa;
+  border: 2px solid #343a40;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#BurgerFlippers button{
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#PattyCookers{
+  background-color: #f8f9fa;
+  border: 2px solid #343a40;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#PattyCookers button{
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+.CostText img{
+  width: 20px;
+  height: 100%;
+}
+
+.click-img{
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+.click-img:active{
+  transform: translate(4px, 4px);
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  
+}
+.click-counter,.CompanyName{
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+.clicks-perSec{
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+.main-container{
+  display: flex;
+  border-radius: 10px;
+}
+.left{
+  width: 50%;
+  background:blue;
+  justify-content: center;
+}
+.right{
+  width: 50%;
+  background:green;
+  
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }}
