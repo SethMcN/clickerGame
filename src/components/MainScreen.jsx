@@ -5,7 +5,7 @@ export default function MainScreen() {
   
   const [CompanyName, setCompanyName] = useState('Burger Clicker');
 
-  const [clicks, setClicks] = useState(0);
+  const [clicks, setClicks] = useState(100);
   const [clicksPerSec, setClicksPerSec] = useState(0);
 
   const [burgerFlippersCount, setBurgerFlippersCount] = useState(0);
@@ -75,7 +75,7 @@ export default function MainScreen() {
         <p className='clicks-perSec'>{(clicksPerSec).toFixed(2)} Burgers per second</p>
 
         <div className='button-container'>
-          <img className='click-img' src="freshBurger.png" alt="burger" onClick={() => { handleClick();}}/>
+          <img className='click-img' src="src/components/freshBurger.png" alt="burger" onClick={() => { handleClick();}}/>
         </div>
       </div>
         

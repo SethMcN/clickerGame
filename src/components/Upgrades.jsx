@@ -40,21 +40,21 @@ export default function Upgrades(props) {
         <h1>Burger Flippers</h1>
         <button onClick={() => handleClick('burger-flipper',BurgerFlippersData[0],BurgerFlippersCostInternal)}>Buy</button>
         <p className='CountText'>count = {BurgerFlippersCountInternal}</p>
-        <p className='CostText'>cost = {BurgerFlippersCostInternal} <img src="src\assets\freshBurger.png" alt="" /> </p>
+        <p className='CostText'>cost = {BurgerFlippersCostInternal} <img src="src/components/freshBurger.png" alt="" /> </p>
       </div>
 
       <div id='PattyCookers'>
         <h1>Patty Cookers</h1>
         <button onClick={() => handleClick("patty-cooker",PattyCookerData[0],PattyCookerData[1])}>Buy</button>
         <p className='CountText'>count = {PattyCookerData[0]}</p>
-        <p className='CostText'>cost = {PattyCookerData[1]} <img src="src\assets\freshBurger.png" alt="" /> </p>
+        <p className='CostText'>cost = {PattyCookerData[1]} <img src="src/components/freshBurger.png" alt="" /> </p>
       </div>
 
       <div id='PattyCookers'>
         <h1>Patty Cookers</h1>
         <button onClick={() => handleClick("patty-cooker",PattyCookerData[0],PattyCookerData[1])}>Buy</button>
         <p className='CountText'>count = {PattyCookerData[0]}</p>
-        <p className='CostText'>cost = {PattyCookerData[1]} <img src="src\assets\freshBurger.png" alt="" /> </p>
+        <p className='CostText'>cost = {PattyCookerData[1]} <img src="src/components/freshBurger.png" alt="" /> </p>
       </div>
 
     </div>
