@@ -30,9 +30,14 @@ export default function Upgrades(props) {
       let valid = false;
       valid = handleUpgrade(upgradeClass,count, cost);
 
-      if (valid === true) {
+      if (upgradeClass === 'burger-flipper' && valid === true) {
         internalBurgerFlippersData();}
+
+
+      if (upgradeClass === 'patty-cooker' && valid === true) {
+        internalPattyCookersData();}
     }
+  
 
   return (
     <div className="UpgradeContainer">
