@@ -11,10 +11,10 @@ export default function MainScreen() {
   const [burgerFlippersCount, setBurgerFlippersCount] = useState(0);
   const [BurgerFlippersCost, setBurgerFlippersCost] = useState(10);
 
-  const [PattyCookerCount, setPattyCookerCount] = useState(0);
-  const [PattyCookerCost, setPattyCookerCost] = useState(100);
+  const [RestaurantsCount, setRestaurantsCount] = useState(0);
+  const [RestaurantsCost, setRestaurantsCost] = useState(100);
 
-  const [Upgradelist, setUpgradelist] = useState([[burgerFlippersCount,BurgerFlippersCost], [PattyCookerCount,PattyCookerCost]]);
+  const [Upgradelist, setUpgradelist] = useState([[burgerFlippersCount,BurgerFlippersCost], [RestaurantsCount,RestaurantsCost]]);
 
 
   useEffect(() => {
@@ -39,22 +39,20 @@ export default function MainScreen() {
         setClicksPerSec(clicksPerSec + 0.1);
         setClicks(clicks - cost);}
         
-      if (upgradeClass === 'patty-cooker'){
-        console.log('patty-cooker upgraded')
-        setPattyCookerCount(count + 1);
-        setClicksPerSec(clicksPerSec + 2);
+      if (upgradeClass === 'Restaurants'){
+        console.log('Restaurants upgraded')
+        setRestaurantsCount(count + 1);
+        setClicksPerSec(clicksPerSec + 5);
         setClicks(clicks - cost);}
       
-      returnBool = true;
+      returnBool = true;}
 
-          
-    }
     else {
       console.log('not enough burgers')
       returnBool = false;
     }
 
-    setUpgradelist([[burgerFlippersCount,BurgerFlippersCost], [PattyCookerCount,PattyCookerCost]]);
+    setUpgradelist([[burgerFlippersCount,BurgerFlippersCost], [RestaurantsCount,RestaurantsCost]]);
 
     return returnBool;
 
