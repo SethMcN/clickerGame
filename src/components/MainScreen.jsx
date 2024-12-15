@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Upgrades from './Upgrades';
 export default function MainScreen() {
@@ -8,19 +8,19 @@ export default function MainScreen() {
   const [clicks, setClicks] = useState(100);
   const [clicksPerSec, setClicksPerSec] = useState(0);
 
-  const [burgerFlippersCount, setBurgerFlippersCount] = useState(0);
-  const [BurgerFlippersCost, setBurgerFlippersCost] = useState(10);
+  const [BurgerFlipperCount, setBurgerFlipperCount] = useState(0);
+  const [BurgerFlipperCost, setBurgerFlipperCost] = useState(10);
 
-  const [RestaurantsCount, setRestaurantsCount] = useState(0);
-  const [RestaurantsCost, setRestaurantsCost] = useState(100);
+  const [RestaurantCount, setRestaurantCount] = useState(0);
+  const [RestaurantCost, setRestaurantCost] = useState(100);
 
-  const [Upgradelist, setUpgradelist] = useState([[burgerFlippersCount,BurgerFlippersCost], [RestaurantsCount,RestaurantsCost]]);
+  const [Upgradelist, setUpgradelist] = useState([[BurgerFlipperCount,BurgerFlipperCost], [RestaurantCount,RestaurantCost]]);
 
 
   useEffect(() => {
     if (clicksPerSec > 0) {
       const interval = setInterval(() => {
-        setClicks(clicks + 1);
+        setClicks(prevClicks => prevClicks + 1);
       }, 1000 / clicksPerSec);
       return () => clearInterval(interval);
     }
@@ -29,37 +29,37 @@ export default function MainScreen() {
 
 
   function handleUpgrade(upgradeClass, count, cost) {
-    console.log(count,cost)
-    let returnBool;
+
+    let isUpgradeSuccessful;
     if (clicks >= cost) {
 
       if (upgradeClass === 'burger-flipper'){
         console.log('burger-flipper upgraded');
-        setBurgerFlippersCount(count + 1);
-        setClicksPerSec(clicksPerSec + 0.1);
-        setClicks(clicks - cost);}
+        setBurgerFlipperCount(prevCount => prevCount + 1);
+        setClicksPerSec(prevClicksPerSec => prevClicksPerSec + 0.1);
+        setClicks(prevClicks => prevClicks - cost);}
         
       if (upgradeClass === 'Restaurants'){
         console.log('Restaurants upgraded')
-        setRestaurantsCount(count + 1);
-        setClicksPerSec(clicksPerSec + 5);
-        setClicks(clicks - cost);}
+        setRestaurantCount(prevCount => prevCount + 1);
+        setClicksPerSec(prevClicksPerSec => prevClicksPerSec + 5);
+        setClicks(prevClicks => prevClicks - cost);}
       
-      returnBool = true;}
+      isUpgradeSuccessful = true;}
 
     else {
       console.log('not enough burgers')
-      returnBool = false;
+      isUpgradeSuccessful = false;
     }
 
-    setUpgradelist([[burgerFlippersCount,BurgerFlippersCost], [RestaurantsCount,RestaurantsCost]]);
+    setUpgradelist([[BurgerFlipperCount, BurgerFlipperCost], [RestaurantCount, RestaurantCost]]);
 
-    return returnBool;
+    return isUpgradeSuccessful;
 
   }
 
   const handleClick = () => {
-    setClicks(clicks + 1);
+    setClicks(prevClicks => prevClicks + 1);
   }
 
   return (
