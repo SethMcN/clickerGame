@@ -77,7 +77,7 @@ export default function MainScreen() {
         <div className="button-container">
           <img
             className="click-img"
-            src="src\assets\freshBurger.png"
+            src="/src/assets/freshBurger.png"
             alt="burger"
             onClick={() => {
               handleClick();

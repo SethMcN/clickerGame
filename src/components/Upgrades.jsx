@@ -88,7 +88,7 @@ export default function Upgrades(props) {
         <p className="CountText">count = {RestaurantsCountInternal}</p>
         <p className="CostText">
           cost = {RestaurantsCostInternal}{" "}
-          <img src="src\assets\freshBurger.png" alt="" />{" "}
+          <img src="src\assets\BurgerCookersAmination.gif" alt="" />{" "}
         </p>
       </div>
 
