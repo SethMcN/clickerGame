@@ -68,7 +68,7 @@ export default function Upgrades(props) {
         <p className="CountText">count = {BurgerFlippersCountInternal}</p>
         <p className="CostText">
           cost = {BurgerFlippersCostInternal}{" "}
-          <img src="src\assets\freshBurger.png" alt="" />{" "}
+          <img src="freshBurger.png" alt="" />{" "}
         </p>
       </div>
 
@@ -88,7 +88,7 @@ export default function Upgrades(props) {
         <p className="CountText">count = {RestaurantsCountInternal}</p>
         <p className="CostText">
           cost = {RestaurantsCostInternal}{" "}
-          <img src="src\assets\BurgerCookersAmination.gif" alt="" />{" "}
+          <img src="BurgerCookersAmination.gif" alt="" />{" "}
         </p>
       </div>
 
@@ -107,8 +107,7 @@ export default function Upgrades(props) {
         </button>
         <p className="CountText">count = {RestaurantsCountInternal}</p>
         <p className="CostText">
-          cost = {RestaurantsCostInternal}{" "}
-          <img src="src\assets\freshBurger.png" alt="" />{" "}
+          cost = {RestaurantsCostInternal} <img src="freshBurger.png" alt="" />{" "}
         </p>
       </div>
     </div>
